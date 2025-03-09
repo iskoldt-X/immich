@@ -9,7 +9,7 @@ interface Options {
 }
 
 const selectors =
-  'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  'button:not([disabled], .hidden), [href]:not(.hidden), input:not([disabled], .hidden), select:not([disabled], .hidden), textarea:not([disabled], .hidden), [tabindex]:not([tabindex="-1"], .hidden)';
 
 export function focusTrap(container: HTMLElement, options?: Options) {
   const triggerElement = document.activeElement;
